@@ -9,6 +9,7 @@ const token = '7944249117:AAEmxDYpMFvVuQ6AiTefYAIqyGE5LrhFiNE';
 const bot = new TelegramBot(token, {polling: true});
 const adminData = JSON.parse(fs.readFileSync('admin.json', 'utf8'));
 const adminIds = adminData.admins;
+const port = process.env.PORT || 3000;
 const timeLimit = parseInt(adminData.limit, 10);
 
 console.log(figlet.textSync('SkyranXDDoS', {
